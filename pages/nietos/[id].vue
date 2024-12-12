@@ -1,0 +1,40 @@
+// pages/nietos/[id].vue
+<template>
+  <div>
+    <h2 class="text-2xl font-bold text-center mb-6">Detalles de {{ nieto.name }}</h2>
+    <div class="text-center">
+      <img :src="nieto.image" :alt="`Imagen de ${nieto.name}`" class="rounded shadow mb-4 mx-auto w-48 h-48 object-cover" />
+    </div>
+    <p class="text-gray-700">Edad: {{ nieto.age }}</p>
+    <p class="text-gray-700">Equipo: {{ nieto.equipo }}</p>
+    <p class="text-gray-700">Descripción: {{ nieto.description }}</p>
+  </div>
+</template>
+
+<script setup>
+import { useRoute } from 'vue-router';
+import { computed } from 'vue';
+
+const route = useRoute();
+const nietos = [
+  { id: 1, name: 'Fernando', age: 33, equipo: 'Betis', description: 'Fanático de los deportes y la tecnología.', image: 'data:image/jpeg;base64,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' },
+  { id: 2, name: 'José Luis', age: 29, equipo: 'Sevilla', description: 'Le encanta la música clásica y tocar guitarra.', image: 'https://via.placeholder.com/150' },
+  { id: 3, name: 'Kike', age: 29, equipo: 'Betis', description: 'Aficionado a los videojuegos y los cómics.', image: 'https://via.placeholder.com/150' },
+  { id: 4, name: 'Pablo', age: 27, equipo: 'Barcelona', description: 'Entusiasta de la cocina y los viajes.', image: 'https://via.placeholder.com/150' },
+  { id: 5, name: 'Manuel', age: 29, equipo: 'Vodka', description: 'Amante de las fiestas y el baile.', image: 'https://via.placeholder.com/150' },
+  { id: 6, name: 'Javier', age: 29, equipo: 'Sevilla', description: 'Disfruta de la lectura y el senderismo.', image: 'https://via.placeholder.com/150' },
+  { id: 7, name: 'Manolo', age: 29, equipo: 'Sevilla', description: 'Apasionado por el cine y la fotografía.', image: 'https://via.placeholder.com/150' },
+  { id: 8, name: 'Fran', age: 29, equipo: 'Betis', description: 'Le encanta el diseño gráfico y el arte.', image: 'https://via.placeholder.com/150' },
+  { id: 9, name: 'María', age: 29, equipo: 'Betis', description: 'Apasionada por la escritura y los idiomas.', image: 'https://via.placeholder.com/150' },
+  { id: 10, name: 'Gonzalo', age: 29, equipo: 'Betis', description: 'Fanático de la historia y los documentales.', image: 'https://via.placeholder.com/150' }
+];
+
+const nieto = computed(() => nietos.find(n => n.id === parseInt(route.params.id)));
+</script>
+
+<style scoped>
+img {
+  max-width: 100%;
+  height: auto;
+}
+</style>
