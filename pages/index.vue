@@ -10,15 +10,11 @@
       celebramos su legado, su amor incondicional, y el impacto que ha tenido en nuestras vidas.
     </p>
     <div class="text-center mt-6 flex items-center justify-center">
-      <!-- <img src="../assets/images/abuelos_boda.jpeg" alt="Abuelos de boda" class="rounded shadow mb-4 mx-auto object-cover w-auto h-64 hover:scale-110 transition ease-linear" /> -->
-      <!-- <img src="../assets/images/abuelo_joven.jpeg" alt="Abuelos de boda" class="rounded shadow mb-4 mx-auto object-cover w-auto h-64 hover:scale-110 transition ease-linear" /> -->
       <img src="../assets/images/familia.jpeg" alt="Abuelos de boda" class="rounded shadow mb-4 mx-auto object-cover w-auto hover:scale-105 transition ease-linear" />
-      <!-- <img src="../assets/images/abuelo_nieves.jpeg" alt="Abuelos de boda" class="rounded shadow mb-4 mx-auto object-cover w-64 h-64 hover:scale-110 transition ease-linear" /> -->
-      <!-- <img src="../assets/images/abuelo_plantas.jpeg" alt="Abuelos de boda" class="rounded shadow mb-4 mx-auto object-cover w-64 h-64 hover:scale-110 transition ease-linear" /> -->
     </div>
 
     <!-- Secciones de Hijos, Nietos y Primeras Damas -->
-    <section class="mt-12 space-y-8 px-4">
+    <section class="hijos mt-12 space-y-8 px-4" id="hijos">
       
       <!-- Sección de Hijos -->
       <div class="section-container w-auto">
@@ -40,7 +36,7 @@
       </div>
 
       <!-- Sección de Nietos -->
-      <div class="section-container">
+      <div class="section-container" id="nietos">
         <h3 class="text-3xl font-semibold text-center text-gray-800 mb-4">Los Nietos</h3>
         <p class="text-xl text-center mx-auto max-w-3xl mt-6 text-gray-700 font-light">
           Este es un espacio dedicado a honrar los 95 años de vida de nuestro querido abuelo. En esta página especial, 
@@ -61,7 +57,7 @@
       </div>
 
       <!-- Sección de Primeras Damas -->
-      <div class="section-container">
+      <div class="section-container" id="damas">
         <h3 class="text-3xl font-semibold text-center text-gray-800 mb-4">Las Primeras Damas</h3>
         <p class="text-xl text-center mx-auto max-w-3xl mt-6 text-gray-700 font-light">
           Este es un espacio dedicado a honrar los 95 años de vida de nuestro querido abuelo. En esta página especial, 
@@ -79,7 +75,8 @@
       </div>
 
       <!-- Explora Más -->
-      <h3 class="text-2xl font-semibold text-center text-gray-800 mt-12">Explora Más</h3>
+      <div class="section-container" id="extra">
+      <h3 class="text-2xl font-semibold text-center text-gray-800 mt-4 mb-12">Explora Más</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 mt-6 mb-12">
         <div class="bg-white rounded-lg shadow-lg p-6 hover:scale-105 transform transition duration-300 border-2 border-gray-200">
           <h4 class="font-semibold text-xl mb-2 text-gray-800">Página de Juego</h4>
@@ -92,6 +89,7 @@
           <nuxt-link to="/experimento" class="text-indigo-500 hover:text-indigo-700">Ir al Experimento</nuxt-link>
         </div>
       </div>
+    </div>
     </section>
   </div>
 </template>
@@ -139,6 +137,7 @@ html, body {
   padding: 0;
   font-family: 'Poppins', sans-serif;
   background-color: antiquewhite;
+  scroll-behavior: smooth;
 }
 
 /* Fondo para el cuerpo de la página */

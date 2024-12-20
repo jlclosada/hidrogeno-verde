@@ -18,13 +18,13 @@
             <nuxt-link to="/experimento" exact-active-class="text-blue-500">El experimento</nuxt-link>
           </li>
           <li class="text-blue-800 hover:text-blue-500 transform hover:scale-110 transition duration-300 ease-in-out py-2 rounded">
-            <nuxt-link to="/proyectos" exact-active-class="text-blue-500">Hijos</nuxt-link>
+            <nuxt-link to="/#hijos" exact-active-class="text-blue-500">Hijos</nuxt-link>
           </li>
           <li class="text-green-800 hover:text-green-500 transform hover:scale-110 transition duration-300 ease-in-out py-2 rounded">
-            <nuxt-link to="/proyectos" exact-active-class="text-blue-500">Nietos</nuxt-link>
+            <nuxt-link to="/#nietos" exact-active-class="text-blue-500">Nietos</nuxt-link>
           </li>
           <li class="text-pink-800 hover:text-pink-500 transform hover:scale-110 transition duration-300 ease-in-out py-2 rounded">
-            <nuxt-link to="/proyectos" exact-active-class="text-blue-500">Damas</nuxt-link>
+            <nuxt-link to="/#damas" exact-active-class="text-blue-500">Damas</nuxt-link>
           </li>
           <li class="text-gray-800 hover:text-gray-500 transform hover:scale-110 transition duration-300 ease-in-out py-2 rounded">
             <nuxt-link to="/contacto" exact-active-class="text-blue-500">Contacto</nuxt-link>
@@ -33,7 +33,7 @@
       </nav>
     </header>
 
-    <div>
+    <div mt-8>
       <slot />
     </div>
 
